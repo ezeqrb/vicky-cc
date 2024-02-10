@@ -17,11 +17,10 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '18'
-    - name: Change to functions directory
-      run: cd functions/
 
     - name: Deploy to Firebase
       run: |
+        cd functions/
         npm install
         firebase use --token ${{ secrets.FIREBASE_TOKEN }}
         npm run deploy
