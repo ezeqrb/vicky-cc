@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: 
+      name: secrets
 
     steps:
     - name: Checkout repository
@@ -25,6 +27,7 @@ jobs:
       run: |
         cd functions/
         npm install
+        echo "FIREBASE_TOKEN: $FIREBASE_TOKEN"
         firebase use default --token $FIREBASE_TOKEN
         npm run deploy
         
