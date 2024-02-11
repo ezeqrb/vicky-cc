@@ -40,9 +40,9 @@ test with functions emulator only
 npm run serve
 ```
 
-#Usage
+# Usage
 
-##Guide
+## Guide
 
 
 after npm run dev 
@@ -60,7 +60,7 @@ you can view logs in firebase emulator UI here
 ![links emulator](https://i.imgur.com/PPP6KAA.png)
 
 
-#Deploy 
+# Deploy 
 
 To deploy the firebase functions just create and push a new github commit. Github actions will make the job 
 
